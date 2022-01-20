@@ -1,13 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './App.css';
 
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-// import firebase from 'firebase/compat/app';
 import { initializeApp } from 'firebase/app';
-// import { getAnalytics } from "firebase/analytics";
-// import 'firebase/compat/firestore';
-import { getFirestore, collection, FieldValue, query, orderBy, limit } from 'firebase/firestore';
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, limit } from 'firebase/firestore';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
@@ -26,9 +24,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+getAnalytics(app);
 const auth = getAuth(app);
-const db = getFirestore();
+const db = getFirestore(app);
 
 
 function App() {
@@ -38,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ChatVibe</h1>
+        <div id='header-img'></div>
         <SignOut />
       </header>
 
@@ -67,6 +65,8 @@ function SignOut() {
 }
 
 function ChatRoom() {
+
+  const dummy = useRef();
   const messagesRef = collection(db, 'messages');
   const q = query(messagesRef, orderBy('createdAt'), limit(25));
 
@@ -79,21 +79,25 @@ function ChatRoom() {
 
     const { uid, photoURL } = auth.currentUser;
 
-    await messagesRef.add({
+    await addDoc(collection(db, 'messages'), {
       text: formValue,
-      createdAt: FieldValue.serverTimestamp(),
+      createdAt: serverTimestamp(),
       uid,
       photoURL
     });
 
     setFormValue('');
+
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <>
-      <div>
+      <main>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
-      </div>
+
+        <div ref={dummy}></div>
+      </main>
 
       <form onSubmit={sendMessage}>
         <input value={formValue} onChange={(e) => setFormValue(e.target.value)} />
