@@ -14,7 +14,7 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCKw8zkQtr5z4oG1z1pzWtJR84yjvTbWeA",
-  authDomain: "chatvibe-686ed.firebaseapp.com",
+  authDomain: "chatvibe.app",
   projectId: "chatvibe-686ed",
   storageBucket: "chatvibe-686ed.appspot.com",
   messagingSenderId: "938234616449",
