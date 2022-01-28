@@ -54,7 +54,7 @@ function SignIn() {
   };
 
   return (
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <button onClick={signInWithGoogle} className='signIn'>Sign in with Google</button>
   );
 }
 
@@ -79,12 +79,14 @@ function ChatRoom() {
 
     const { uid, photoURL } = auth.currentUser;
 
-    await addDoc(collection(db, 'messages'), {
-      text: formValue,
-      createdAt: serverTimestamp(),
-      uid,
-      photoURL
-    });
+    if (formValue !== '') {
+      await addDoc(collection(db, 'messages'), {
+        text: formValue,
+        createdAt: serverTimestamp(),
+        uid,
+        photoURL
+      });
+    }
 
     setFormValue('');
 
@@ -94,15 +96,19 @@ function ChatRoom() {
   return (
     <>
       <main>
-        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+        <div className="messages">
+          {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+        </div>
 
         <div ref={dummy}></div>
       </main>
 
-      <form onSubmit={sendMessage}>
-        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} />
-        <button type='submit'>send</button>
-      </form>
+      <div className="formWrapper">
+        <form onSubmit={sendMessage}>
+          <input value={formValue} onChange={(e) => setFormValue(e.target.value)} />
+          <button type='submit'>send</button>
+        </form>
+      </div>
     </>
   );
 }
