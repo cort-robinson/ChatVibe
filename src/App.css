@@ -20,6 +20,7 @@ html {
 
 .App header {
   background-color: var(--clr-dark);
+  mix-blend-mode: color-dodge;
   height: 10vh;
   min-height: 50px;
   color: var(--clr-light);
@@ -30,7 +31,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 0;
+  z-index: 99;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -96,16 +97,19 @@ form {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: var(--clr-dark);
   width: 100%;
   display: flex;
   font-size: 1.5rem;
   justify-content: center;
+  z-index: 99;
 }
 
 form button {
   background-color: #8C4DE4;
+  max-height: 8vh;
   border-radius: 2em;
+  align-self: center;
 }
 
 
@@ -192,15 +196,17 @@ p {
 }
 
 img {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
-  z-index: 98;
+  z-index: 1;
 }
 
 @supports(mix-blend-mode: screen) {
-  section::after {
+  main::after {
+    z-index: 0;
     content: '';
     position: absolute;
     left: 0;
