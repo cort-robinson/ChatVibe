@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<div align="center" id="top">
+  <img src="img/chatvibeLogoPurple.png" alt="chatvibe logo" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  &#xa0;
 
-## Available Scripts
+  <h1><a href="https://chatvibe.app">Click to go to webapp!</a></h1>
+</div>
 
-In the project directory, you can run:
+<h1 align="center">CHATVIBE</h1>
 
-### `npm start`
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/cort-robinson/chatvibe?color=56BEB8">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/cort-robinson/chatvibe?color=56BEB8">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cort-robinson/chatvibe?color=56BEB8">
 
-### `npm test`
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/cort-robinson/chatvibe?color=56BEB8" /> -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/cort-robinson/chatvibe?color=56BEB8" /> -->
 
-### `npm run build`
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/cort-robinson/chatvibe?color=56BEB8" /> -->
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- Status -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- <h4 align="center">
+	🚧  CHATVIBE 🚀 Under construction...  🚧
+</h4>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<hr> -->
 
-### `npm run eject`
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0;
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/cort-robinson" target="_blank">Author - Cort Robinson</a> &#xa0; | &#xa0;
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :dart: About ##
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ChatVibe is a webapp that allows users to connect with one another across devices. Running in any browser, users can simply login with a Google acccount and start chatting instantly. The app is currently in development and features such as contact specific group chats have not been implemented.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="img/chatvibeDemo.png" alt="chatvibe Screenshot" />
 
-## Learn More
+## :sparkles: Features ##
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: Google user authentication;\
+:heavy_check_mark: Realtime chat;\
+:heavy_check_mark: Google account profile importing;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :rocket: Technologies ##
 
-### Code Splitting
+The following tools were used in this project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React](https://reactjs.org/)
+- [FireBase](https://firebase.google.com/)
 
-### Analyzing the Bundle Size
+## About the Author ##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Cort Robinson:
+  Growing up in a military family, Cort has travelled all around the US. Throughout that time he developed a love and passion for technology and computer science. As a graduate at Holberton school of Computer Science, Cort has developed skills across a wide range of technologies and is always excited to expand his knowledge in to new areas.
 
-### Making a Progressive Web App
+## :memo: License ##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Made with :heart: by <a href="https://github.com/cort-robinson" target="_blank">Cort Robinson</a>
 
-### Deployment
+* **Cort Robinson** - [GitHub](https://github.com/cort-robinson), [Twitter](https://twitter.com/cort_robinson), [LinkedIn](https://www.linkedin.com/in/cort-robinson-4201b41a9/)
+&#xa0;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#top">Back to top</a>
